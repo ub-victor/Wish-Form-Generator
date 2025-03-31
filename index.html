@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wish Generator - Make Your Wish Come True</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-star"></i> Wish Generator</h1>
+            <p class="subtitle">Make your deepest wish and we'll try to make it come true!</p>
+        </header>
+
+        <main>
+            <form id="wishForm" method="post" action="traitement.php">
+                <div class="form-section">
+                    <fieldset class="contact-info">
+                        <legend><i class="fas fa-user-circle"></i> Your Information</legend>
+                        
+                        <div class="form-group">
+                            <label for="nom">What's your last name? <span class="required">*</span></label>
+                            <input type="text" name="nom" id="nom" required placeholder="Enter your last name">
+                            <i class="fas fa-user icon"></i>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="prenom">What's your first name? <span class="required">*</span></label>
+                            <input type="text" name="prenom" id="prenom" required placeholder="Enter your first name">
+                            <i class="fas fa-user icon"></i>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">What's your email? <span class="required">*</span></label>
+                            <input type="email" name="email" id="email" required placeholder="Enter your email">
+                            <i class="fas fa-envelope icon"></i>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div class="form-section">
+                    <fieldset class="wish-selection">
+                        <legend><i class="fas fa-magic"></i> Your Wish</legend>
+                        
+                        <div class="wish-options">
+                            <p class="instruction">Make a wish you'd like to see come true:</p>
+                            
+                            <div class="radio-group">
+                                <input type="radio" name="souhait" value="riche" id="riche">
+                                <label for="riche">
+                                    <i class="fas fa-money-bill-wave"></i>
+                                    <span>Be rich</span>
+                                </label>
+                            </div>
+                            
+                            <div class="radio-group">
+                                <input type="radio" name="souhait" value="celebre" id="celebre">
+                                <label for="celebre">
+                                    <i class="fas fa-star"></i>
+                                    <span>Be famous</span>
+                                </label>
+                            </div>
+                            
+                            <div class="radio-group">
+                                <input type="radio" name="souhait" value="intelligent" id="intelligent">
+                                <label for="intelligent">
+                                    <i class="fas fa-brain"></i>
+                                    <span>Be <strong>even</strong> smarter</span>
+                                </label>
+                            </div>
+                            
+                            <div class="radio-group">
+                                <input type="radio" name="souhait" value="autre" id="autre">
+                                <label for="autre">
+                                    <i class="fas fa-ellipsis-h"></i>
+                                    <span>Other...</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group other-wish" id="otherWishContainer" style="display: none;">
+                            <label for="precisions">If "Other", please specify:</label>
+                            <textarea name="precisions" id="precisions" cols="40" rows="4" placeholder="Describe your wish in detail..."></textarea>
+                            <i class="fas fa-pencil-alt icon"></i>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div class="form-actions">
+                    <button type="reset" class="btn btn-reset">
+                        <i class="fas fa-undo"></i> Reset
+                    </button>
+                    <button type="submit" class="btn btn-submit">
+                        <i class="fas fa-paper-plane"></i> Make My Wish!
+                    </button>
+                </div>
+            </form>
+        </main>
+
+        <div id="confirmationModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2><i class="fas fa-check-circle"></i> Wish Received!</h2>
+                <p>Your wish has been successfully submitted. The magic is happening!</p>
+                <div class="confetti"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://github.com/ub-victor" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="#" aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+            <p class="copyright">Copyright &copy; 2023-2025 Victoria | All Rights Reserved</p>
+            <p class="github-prompt">
+                <i class="fas fa-hand-point-down"></i> Check out my projects on 
+                <a href="https://github.com/ub-victor" target="_blank">GitHub</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
