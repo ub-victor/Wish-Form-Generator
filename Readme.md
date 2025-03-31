@@ -1,5 +1,11 @@
 # Wish Generator - Make Your Wish Come True  
 
+## Description  
+A web application that allows users to generate wishes with customized options. This project showcases dynamic features and responsive design using modern JavaScript techniques.  
+
+## Live Demo  
+You can view the live application [here](https://wish-generator.netlify.app/). 
+
 ## Key Features of This Implementation  
 
 ### Responsive Design  
