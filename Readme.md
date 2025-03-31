@@ -1,4 +1,4 @@
-# Project Title  
+# Wish Generator - Make Your Wish Come True  
 
 ## Key Features of This Implementation  
 
